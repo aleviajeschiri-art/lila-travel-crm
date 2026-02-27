@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lila Travel CRM - Agenda de Agentes de Viajes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen" class="center">
+  <h1>💜 Lila Travel CRM</h1>
+  <p>Agenda de Agentes de Viajes</p>
+  <input type="text" id="username" placeholder="Usuario">
+  <input type="password" id="password" placeholder="Contraseña">
+  <button onclick="login()">Ingresar</button>
+</div>
+
+<div id="dashboard" class="hidden">
+  <header>
+    <h2>✈️ Lila Travel CRM</h2>
+    <button onclick="logout()">Cerrar sesión</button>
+  </header>
+
+  <div class="board">
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>🌸 Nuevo</h3>
+      <div id="Nuevo" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>✈️ Cotizando</h3>
+      <div id="Cotizando" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>💬 Seguimiento</h3>
+      <div id="Seguimiento" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>💖 Confirmado</h3>
+      <div id="Confirmado" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>❌ Perdido</h3>
+      <div id="Perdido" class="task-list"></div>
+    </div>
+  </div>
+
+  <button class="add-btn" onclick="addClient()">+ Nuevo Cliente</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
